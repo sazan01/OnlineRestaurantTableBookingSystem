@@ -24,10 +24,21 @@ public class LoginFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return super.onCreateView(inflater, container, savedInstanceState);
 
-        View view = inflater.inflate(R.layout., container, false);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         userlogin = view.findViewById(R.id.etusername);
         passwordlogin = view.findViewById(R.id.etpassword);
         btnlogin = view.findViewById(R.id.btnlogin);
+
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Login();
+            }
+
+            private void Login() {
+            }
+        });
+        return view;
     }
 }
